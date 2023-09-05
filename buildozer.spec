@@ -1,7 +1,7 @@
 [app]
 
 # (str) Title of your application
-title = CalculApp
+title = DESCANSO
 
 # (str) Package name
 package.name = myapp

@@ -1,0 +1,140 @@
+BoxLayoutExample:
+
+<BoxLayoutExample>:
+    orientation: "vertical"
+    padding: ("20dp", "20dp", "20dp", "20dp")
+    spacing: "20dp"
+    size_hint_x: None  # Establece un ancho fijo
+    width: min(300, self.width)  # Limita el ancho a un máximo de 300dp
+    
+    
+    Label:
+        text: root.informe_text
+        size_hint: (None, None)
+        size: "300dp", "60dp"
+
+    BoxLayout:
+        size_hint: (None, None)
+        size: "300dp", "60dp"
+
+        CheckBox:
+            id: descansar_checkbox
+            size_hint_x: 0.1
+            active: False  # El estado se configurará automáticamente
+
+        Label:
+            text: "Descansar lo necesario"
+            size_hint_x: 0.5
+
+    BoxLayout:
+        size_hint: (None, None)
+        size: "300dp", "60dp"
+
+
+        CheckBox:
+            id: acostarse_checkbox
+            size_hint_x: 0.1
+            active: False  # El estado se configurará automáticamente
+
+        Label:
+            text: "Acostarme temprano"
+            size_hint_x: 0.5
+
+    BoxLayout:
+        size_hint: (None, None)
+        size: "300dp", "60dp"
+
+
+        CheckBox:
+            id: despertar_checkbox
+            size_hint_x: 0.1
+            active: False  # El estado se configurará automáticamente
+
+        Label:
+            text: "Levantarme temprano"
+            size_hint_x: 0.5
+
+    BoxLayout:
+        size_hint: None, None
+        size: "120dp", "40dp"
+
+        Label:
+            text: "Me acosté:"
+            size_hint: None, None
+            size: "120dp", "40dp"
+
+        BoxLayout:
+            spacing: "10dp"
+            TextInput:
+                size_hint: None, None
+                width: "40dp"
+                height: "40dp"
+                id: acostado_horas
+                input_filter: "int"
+                multiline: False
+
+            Label:
+                text: ":"
+
+            TextInput:
+                size_hint: None, None
+                width: "40dp"
+                height: "40dp"
+                id: acostado_minutos
+                input_filter: "int"
+                multiline: False
+                text: "00"  # Establecer el valor predeterminado a cero
+                on_focus: if self.focus: self.text = ''  # Borra el valor predeterminado al enfocar
+
+
+
+    BoxLayout:
+        size_hint: None, None
+        size: "120dp", "40dp"
+
+        Label:
+            text: "Me desperté:"
+            size_hint: None, None
+            size: "120dp", "40dp"
+
+        BoxLayout:
+            spacing: "10dp"
+            TextInput:
+                size_hint: None, None
+                width: "40dp"
+                height: "40dp"
+                id: despertado_horas
+                input_filter: "int"
+                multiline: False
+
+            Label:
+                text: ":"
+
+            TextInput:
+                size_hint: None, None
+                width: "40dp"
+                height: "40dp"
+                id: despertado_minutos
+                input_filter: "int"
+                multiline: False
+                text: "00"  # Establecer el valor predeterminado a cero
+                on_focus: if self.focus: self.text = ''  # Borra el valor predeterminado al enfocar
+
+
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_y: None
+        height: "40dp"
+        spacing: "10dp"  # Espacio entre el botón y el elemento vacío
+
+        Label:  # Espacio vacío a la izquierda
+            size_hint_x: None
+            width: "120dp"
+
+        Button:
+            text: "Guardar Informe"
+            size_hint: None, None
+            size: "120dp", "40dp"
+            on_release: root.guardar_informe()
+
+
