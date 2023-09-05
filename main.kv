@@ -13,46 +13,7 @@ BoxLayoutExample:
         size_hint: (None, None)
         size: "300dp", "60dp"
 
-    BoxLayout:
-        size_hint: (None, None)
-        size: "300dp", "60dp"
 
-        CheckBox:
-            id: descansar_checkbox
-            size_hint_x: 0.1
-            active: False  # El estado se configurará automáticamente
-
-        Label:
-            text: "Descansar lo necesario"
-            size_hint_x: 0.5
-
-    BoxLayout:
-        size_hint: (None, None)
-        size: "300dp", "60dp"
-
-
-        CheckBox:
-            id: acostarse_checkbox
-            size_hint_x: 0.1
-            active: False  # El estado se configurará automáticamente
-
-        Label:
-            text: "Acostarme temprano"
-            size_hint_x: 0.5
-
-    BoxLayout:
-        size_hint: (None, None)
-        size: "300dp", "60dp"
-
-
-        CheckBox:
-            id: despertar_checkbox
-            size_hint_x: 0.1
-            active: False  # El estado se configurará automáticamente
-
-        Label:
-            text: "Levantarme temprano"
-            size_hint_x: 0.5
 
     BoxLayout:
         size_hint: None, None
@@ -120,7 +81,46 @@ BoxLayoutExample:
                 text: "00"  # Establecer el valor predeterminado a cero
                 on_focus: if self.focus: self.text = ''  # Borra el valor predeterminado al enfocar
 
+    BoxLayout:
+        size_hint: (None, None)
+        size: "300dp", "60dp"
 
+        CheckBox:
+            id: descansar_checkbox
+            size_hint_x: 0.1
+            active: False  # El estado se configurará automáticamente
+
+        Label:
+            text: "Descansar lo necesario"
+            size_hint_x: 0.5
+
+    BoxLayout:
+        size_hint: (None, None)
+        size: "300dp", "60dp"
+
+
+        CheckBox:
+            id: acostarse_checkbox
+            size_hint_x: 0.1
+            active: False  # El estado se configurará automáticamente
+
+        Label:
+            text: "Acostarme temprano"
+            size_hint_x: 0.5
+
+    BoxLayout:
+        size_hint: (None, None)
+        size: "300dp", "60dp"
+
+
+        CheckBox:
+            id: despertar_checkbox
+            size_hint_x: 0.1
+            active: False  # El estado se configurará automáticamente
+
+        Label:
+            text: "Levantarme temprano"
+            size_hint_x: 0.5
     BoxLayout:
         orientation: "horizontal"
         size_hint_y: None
